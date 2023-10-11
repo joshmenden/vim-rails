@@ -1499,7 +1499,7 @@ function! s:readable_default_rake_task(...) dict abort
         return 'test:units TEST='.s:rquote(test).opts
       endif
     elseif test =~# '^spec\>'
-      return 'spec SPEC='.s:rquote(with_line)
+      return 'rspec '.s:rquote(with_line)
     elseif test =~# '^features\>'
       return 'cucumber FEATURE='.s:rquote(with_line)
     else
